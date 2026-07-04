@@ -13,7 +13,7 @@
     "click",
     function (e) {
       // Sayfa içi etkileşimlere izin ver
-      if (e.target.closest('#burger, [data-close], .fcard, .modal__bd, a[href^="#"]')) return;
+      if (e.target.closest('#burger, [data-close], .fcard, .modal__bd, a[href^="#"], .wa, .contact a, a[href^="tel:"], a[href^="mailto:"], a[href^="https://wa.me"]')) return;
       // Başka sayfaya/dış bağlantıya/forma gidişi engelle
       if (e.target.closest('a, button, [role="button"], input[type="submit"]')) {
         e.preventDefault();
