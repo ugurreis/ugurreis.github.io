@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Başvuru — Influencer Türkiye</title>
+  <meta name="description" content="Influencer veya marka olarak Influencer Türkiye'ye başvurun." />
+  <link rel="icon" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__in">
+      <a class="brand" href="index.html" aria-label="Influencer Türkiye"><img src="assets/img/logo.svg" alt="Influencer Türkiye" class="brand__logo" /></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html#anasayfa">Anasayfa</a>
+        <a href="index.html#hizmetler">Hizmetler</a>
+        <a href="index.html#surec">Nasıl Çalışıyoruz</a>
+        <a href="index.html#portfoy">Portföy</a>
+        <a href="index.html#referanslar">Referanslar</a>
+        <a href="index.html#iletisim">İletişim</a>
+      </nav>
+      <div class="nav__cta">
+        <a href="basvuru.html" class="btn btn--ghost btn--sm">Giriş</a>
+        <a href="basvuru.html" class="btn btn--primary btn--sm">Başvuru Yap</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menü"><i class="i-menu"></i></button>
+    </div>
+  </header>
+
+  <main class="apply-page">
+    <div class="container apply-wrap">
+      <div class="apply-tabs" id="applyTabs">
+        <button class="apply-tab is-active" data-tab="influencer"><i class="i-spark"></i> Influencer'im</button>
+        <button class="apply-tab" data-tab="brand"><i class="i-users"></i> Markayım</button>
+      </div>
+
+      <!-- başarı -->
+      <div class="apply-success" id="applySuccess" hidden>
+        <div class="apply-success__ic"><i class="i-check"></i></div>
+        <h1>Başvurunuz alındı!</h1>
+        <p>Teşekkürler. Ekibimiz başvurunuzu inceleyip <strong>24 saat içinde</strong> sizinle iletişime geçecek.</p>
+        <a href="index.html" class="btn btn--primary btn--lg">Anasayfaya dön</a>
+      </div>
+
+      <div id="applyBody">
+        <div class="apply-head">
+          <span class="apply-head__ic" id="applyHeadIc"><i class="i-spark"></i></span>
+          <div>
+            <h1 id="applyTitle">Influencer Başvuru Formu</h1>
+            <p id="applySub">Sosyal medya varlığınızı büyütmek için bize katılın</p>
+          </div>
+        </div>
+
+        <p class="apply-error" id="applyError" hidden></p>
+
+        <!-- INFLUENCER -->
+        <form id="formInf" class="apply-form" novalidate>
+          <section class="form-card">
+            <h2 class="form-card__title"><span class="fc-ic"><i class="i-users"></i></span> Kişisel Bilgiler</h2>
+            <div class="field"><label>Ad Soyad <em>*</em></label><input name="Ad Soyad" required placeholder="Adınız Soyadınız" /></div>
+            <div class="form-row">
+              <div class="field"><label>E-posta <em>*</em></label><input type="email" name="E-posta" required placeholder="ornek@email.com" /></div>
+              <div class="field"><label>Telefon <em>*</em></label><input name="Telefon" required placeholder="+90 5XX XXX XX XX" /></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Cinsiyet</label>
+                <select name="Cinsiyet"><option value="">Seçiniz</option><option>Kadın</option><option>Erkek</option><option>Belirtmek istemiyorum</option></select>
+              </div>
+              <div class="field"><label>Ülke <em>*</em></label><input name="Ülke" required value="Türkiye" placeholder="Türkiye" /></div>
+            </div>
+            <div class="field"><label>Şehir <em>*</em></label><input name="Şehir" required placeholder="İstanbul" /></div>
+            <div class="field"><label>İlgi Alanları</label><textarea name="İlgi Alanları" placeholder="Örn: Teknoloji, Moda, Spor, Yemek..."></textarea></div>
+          </section>
+
+          <section class="form-card">
+            <h2 class="form-card__title"><span class="fc-ic"><i class="i-chart"></i></span> Sosyal Medya Hesapları</h2>
+            <p class="form-card__hint">En az bir tane zorunlu</p>
+            <div class="form-row">
+              <div class="field"><label><i class="i-instagram"></i> Instagram URL</label><input class="js-social" name="Instagram" placeholder="https://instagram.com/kullanici" /></div>
+              <div class="field"><label><i class="i-youtube"></i> YouTube URL</label><input class="js-social" name="YouTube" placeholder="https://youtube.com/@kullanici" /></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Facebook URL</label><input class="js-social" name="Facebook" placeholder="https://facebook.com/kullanici" /></div>
+              <div class="field"><label><i class="i-x"></i> X (Twitter) URL</label><input class="js-social" name="X (Twitter)" placeholder="https://x.com/kullanici" /></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Twitch TV URL</label><input class="js-social" name="Twitch" placeholder="https://twitch.tv/kullanici" /></div>
+              <div class="field"><label>Blog/Web Sitesi URL</label><input class="js-social" name="Blog/Web" placeholder="https://blogunuz.com" /></div>
+            </div>
+            <div class="field"><label>Diğer Sosyal Medya</label><input class="js-social" name="Diğer Sosyal Medya" placeholder="Diğer platform URL'i" /></div>
+          </section>
+
+          <section class="form-card">
+            <h2 class="form-card__title"><span class="fc-ic"><i class="i-finans"></i></span> Bütçe Beklentisi</h2>
+            <div class="field"><label>Paylaşım Başına Ücret (TRY) <em>*</em></label><input type="number" name="Paylaşım Başına Ücret (TRY)" required placeholder="0.00" /></div>
+          </section>
+
+          <label class="kvkk-box">
+            <input type="checkbox" class="js-kvkk" />
+            <span><a href="kvkk.html" target="_blank">Kişisel Verilerin Korunması Kanunu</a> metnini okudum, anladım ve <strong>onaylıyorum.</strong> <em>*</em></span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg apply-submit"><i class="i-arrow"></i> Başvuruyu Gönder</button>
+        </form>
+
+        <!-- MARKA -->
+        <form id="formBrand" class="apply-form" novalidate hidden>
+          <section class="form-card">
+            <h2 class="form-card__title"><span class="fc-ic"><i class="i-users"></i></span> Marka Bilgileri</h2>
+            <div class="form-row">
+              <div class="field"><label>Marka / Şirket Adı <em>*</em></label><input name="Marka" required placeholder="Marka adınız" /></div>
+              <div class="field"><label>Yetkili Kişi <em>*</em></label><input name="Yetkili Kişi" required placeholder="Ad Soyad" /></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>E-posta <em>*</em></label><input type="email" name="E-posta" required placeholder="ornek@email.com" /></div>
+              <div class="field"><label>Telefon <em>*</em></label><input name="Telefon" required placeholder="+90 5XX XXX XX XX" /></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label>Web Sitesi</label><input name="Web Sitesi" placeholder="https://markaniz.com" /></div>
+              <div class="field"><label>Sektör <em>*</em></label><input name="Sektör" required placeholder="Örn: Kozmetik, Teknoloji" /></div>
+            </div>
+          </section>
+          <section class="form-card">
+            <h2 class="form-card__title"><span class="fc-ic"><i class="i-target"></i></span> Kampanya Detayları</h2>
+            <div class="field"><label>Kampanya Bütçesi (TRY) <em>*</em></label><input type="number" name="Kampanya Bütçesi (TRY)" required placeholder="0.00" /></div>
+            <div class="field"><label>Kampanya Hedefi</label><textarea name="Kampanya Hedefi" placeholder="Markanızın hedeflerini ve beklentilerinizi kısaca anlatın..."></textarea></div>
+          </section>
+          <label class="kvkk-box">
+            <input type="checkbox" class="js-kvkk" />
+            <span><a href="kvkk.html" target="_blank">Kişisel Verilerin Korunması Kanunu</a> metnini okudum, anladım ve <strong>onaylıyorum.</strong> <em>*</em></span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg apply-submit"><i class="i-arrow"></i> Başvuruyu Gönder</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/img/logo.svg" alt="Influencer Türkiye" class="footer__logo" />
+        <p>Türkiye'nin 13.000+ influencer ağıyla markaları doğru kitleyle buluşturan micro-influencer pazarlama platformu.</p>
+      </div>
+      <div class="footer__col"><h4>Keşfet</h4><a href="index.html#hizmetler">Hizmetler</a><a href="index.html#surec">Nasıl Çalışıyoruz</a><a href="index.html#portfoy">Portföy</a><a href="index.html#referanslar">Referanslar</a></div>
+      <div class="footer__col"><h4>Başvuru</h4><a href="basvuru.html">Marka başvurusu</a><a href="basvuru.html">Influencer başvurusu</a></div>
+      <div class="footer__col footer__contact" id="footContact"></div>
+    </div>
+    <div class="footer__bar"><div class="container footer__bar-in"><span>© 2026 Influencer Türkiye · Şişli, İstanbul</span><span>Kurucu &amp; CEO: Savaş Ünal</span></div></div>
+  </footer>
+
+  <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="i-wa"></i></a>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/basvuru.js" defer></script>
+</body>
+</html>

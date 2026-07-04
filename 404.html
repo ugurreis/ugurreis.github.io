@@ -27,8 +27,8 @@
         <a href="#iletisim">İletişim</a>
       </nav>
       <div class="nav__cta">
-        <a href="marka-basvuru.html" class="btn btn--ghost btn--sm">Giriş</a>
-        <a href="marka-basvuru.html" class="btn btn--primary btn--sm">Başvuru Yap</a>
+        <a href="basvuru.html" class="btn btn--ghost btn--sm">Giriş</a>
+        <a href="basvuru.html" class="btn btn--primary btn--sm">Başvuru Yap</a>
       </div>
       <button class="nav__burger" id="burger" aria-label="Menü"><i class="i-menu"></i></button>
     </div>
@@ -43,16 +43,16 @@
           <h1 class="hero__title">Markanızı doğru <span>influencer'larla</span> büyütüyoruz.</h1>
           <p class="hero__sub">13.000+ influencer ağımızdan markanıza en uygun isimleri seçiyor, kampanyayı uçtan uca yönetiyoruz.</p>
           <div class="hero__cta">
-            <a href="marka-basvuru.html" class="btn btn--primary btn--lg">Marka olarak başvur <i class="i-arrow"></i></a>
-            <a href="influencer-basvuru.html" class="btn btn--primary btn--lg">Influencer olarak başvur <i class="i-arrow"></i></a>
+            <a href="basvuru.html?tip=marka" class="btn btn--primary btn--lg">Marka olarak başvur <i class="i-arrow"></i></a>
+            <a href="basvuru.html?tip=influencer" class="btn btn--primary btn--lg">Influencer olarak başvur <i class="i-arrow"></i></a>
           </div>
           <ul class="hero__trust" id="heroTrust"></ul>
         </div>
         <div class="hero__media reveal">
           <div class="collage">
-            <figure class="collage__a"><img src="assets/portf/hatipoglugizem.webp" alt="" loading="eager" /></figure>
-            <figure class="collage__b"><img src="assets/portf/sukrankaymak.webp" alt="" /></figure>
-            <figure class="collage__c"><img src="assets/portf/ozlemmekik.webp" alt="" /></figure>
+            <figure class="collage__a"><img src="assets/portf/zey_zor.webp" alt="" loading="eager" /></figure>
+            <figure class="collage__b"><img src="assets/portf/bagtubaa.webp" alt="" /></figure>
+            <figure class="collage__c"><img src="assets/portf/omer_olgun.webp" alt="" /></figure>
             <div class="collage__badge"><b>13.000+</b><span>Influencer ağı</span></div>
             <div class="collage__chip"><i class="i-verified"></i> Onaylı profiller</div>
           </div>
@@ -68,7 +68,7 @@
             <span class="eyebrow">Portföy</span>
             <h2 class="title">Öne çıkan influencer'lar</h2>
           </div>
-          <a href="marka-basvuru.html" class="btn btn--outline btn--sm">Tümünü keşfet <i class="i-arrow"></i></a>
+          <button type="button" id="allBtn" class="btn btn--outline btn--sm">Tümünü keşfet <i class="i-arrow"></i></button>
         </header>
       </div>
       <div class="feat"><div class="feat__track" id="featGrid"></div></div>
@@ -110,7 +110,7 @@
             <h2 class="title"><span class="hl">%90</span> daha hedefli kitle</h2>
             <p class="lead">Doğru micro-influencer stratejisiyle bütçenizi isabetle kullanır, ünlü kampanyalarından daha yüksek etkileşim elde edersiniz.</p>
             <ul class="checklist" id="benefitList"></ul>
-            <a href="marka-basvuru.html" class="btn btn--primary">Ücretsiz danışmanlık al <i class="i-arrow"></i></a>
+            <a href="basvuru.html?tip=marka" class="btn btn--primary">Ücretsiz danışmanlık al <i class="i-arrow"></i></a>
           </div>
           <div class="split__panel reveal">
             <div class="panel-head">Rakamlarla Influencer Türkiye</div>
@@ -150,8 +150,8 @@
           <h2 class="cta__title">Sıradaki kampanyanız bizimle başlasın</h2>
           <p class="cta__sub">İster marka olarak doğru sesi arıyor olun, ister influencer olarak doğru markalarla çalışmak isteyin — ağımız size açık.</p>
           <div class="cta__btns">
-            <a href="marka-basvuru.html" class="btn btn--light btn--lg">Marka olarak başvur <i class="i-arrow"></i></a>
-            <a href="influencer-basvuru.html" class="btn btn--outline btn--lg">Influencer olarak başvur <i class="i-arrow"></i></a>
+            <a href="basvuru.html?tip=marka" class="btn btn--light btn--lg">Marka olarak başvur <i class="i-arrow"></i></a>
+            <a href="basvuru.html?tip=influencer" class="btn btn--outline btn--lg">Influencer olarak başvur <i class="i-arrow"></i></a>
           </div>
         </div>
       </div>
@@ -216,8 +216,8 @@
       </div>
       <div class="footer__col">
         <h4>Başvuru</h4>
-        <a href="marka-basvuru.html">Marka başvurusu</a>
-        <a href="influencer-basvuru.html">Influencer başvurusu</a>
+        <a href="basvuru.html?tip=marka">Marka başvurusu</a>
+        <a href="basvuru.html?tip=influencer">Influencer başvurusu</a>
       </div>
       <div class="footer__col footer__contact" id="footContact"></div>
     </div>
@@ -233,6 +233,5 @@
 
   <script src="assets/js/data.js" defer></script>
   <script src="assets/js/app.js" defer></script>
-  <script src="assets/js/lock.js" defer></script>
 </body>
 </html>

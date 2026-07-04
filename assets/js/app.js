@@ -169,13 +169,42 @@
       </div>
       <p style="color:var(--muted);font-size:.95rem;margin-bottom:16px">${esc(p.bio)}</p>
       <div class="mp__plats">${plats}</div>
-      <a href="marka-basvuru.html" class="btn btn--primary" style="width:100%">Bu influencer ile çalış ${ic.arrow}</a>`;
+      <a href="basvuru.html?tip=marka" class="btn btn--primary" style="width:100%">Bu influencer ile çalış ${ic.arrow}</a>`;
     hydrateIcons($("#mPanel"));
     modal.classList.add("open");
+    document.documentElement.classList.add("modal-open");
     document.body.style.overflow = "hidden";
     $$("[data-close]", modal).forEach((b) => b.addEventListener("click", closeModal));
   }
-  function closeModal() { if (modal) modal.classList.remove("open"); document.body.style.overflow = ""; }
+  function anyModalOpen() { return !!document.querySelector(".modal.open"); }
+  function closeModal() {
+    if (modal) modal.classList.remove("open");
+    if (!anyModalOpen()) { document.documentElement.classList.remove("modal-open"); document.body.style.overflow = ""; }
+  }
+
+  /* ---------- "Tümünü keşfet" — tüm influencer grid modalı ---------- */
+  let allModal;
+  function openAll() {
+    if (!allModal) {
+      allModal = document.createElement("div");
+      allModal.className = "modal modal--all";
+      allModal.innerHTML = '<div class="modal__bd" data-close></div><div class="modal__panel modal__panel--all"><button class="modal__x" data-close aria-label="Kapat">' + ic.close + '</button><h3 class="allm__title">Tüm Influencerlar</h3><div class="allm__grid" id="allGrid"></div></div>';
+      document.body.appendChild(allModal);
+      const list = IT.featured || [];
+      const grid = allModal.querySelector("#allGrid");
+      grid.innerHTML = list.map((p, i) => featCard(p, i)).join("");
+      $$(".fcard", grid).forEach((c) => c.addEventListener("click", () => openModal(list[+c.dataset.i])));
+      hydrateIcons(allModal);
+      $$("[data-close]", allModal).forEach((b) => b.addEventListener("click", closeAll));
+    }
+    allModal.classList.add("open");
+    document.documentElement.classList.add("modal-open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeAll() {
+    if (allModal) allModal.classList.remove("open");
+    if (!anyModalOpen()) { document.documentElement.classList.remove("modal-open"); document.body.style.overflow = ""; }
+  }
 
   /* ---------- interactions ---------- */
   function interactions() {
@@ -217,6 +246,10 @@
     render();
     interactions();
     window.ITopenModal = openModal;
+    window.IThydrate = hydrateIcons;
+    const allBtn = $("#allBtn");
+    if (allBtn) allBtn.addEventListener("click", openAll);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAll(); });
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
