@@ -169,7 +169,7 @@
       </div>
       <p style="color:var(--muted);font-size:.95rem;margin-bottom:16px">${esc(p.bio)}</p>
       <div class="mp__plats">${plats}</div>
-      <a href="basvuru.html?tip=marka" class="btn btn--primary" style="width:100%">Bu influencer ile çalış ${ic.arrow}</a>`;
+      <a href="basvuru.html?tip=marka&inf=${encodeURIComponent(p.name)}" class="btn btn--primary" style="width:100%">Bu influencer ile çalış ${ic.arrow}</a>`;
     hydrateIcons($("#mPanel"));
     modal.classList.add("open");
     document.documentElement.classList.add("modal-open");

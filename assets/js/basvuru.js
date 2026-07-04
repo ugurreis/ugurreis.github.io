@@ -29,9 +29,16 @@
     }
     tabs.forEach(function (t) { t.addEventListener("click", function () { setMode(t.dataset.tab); }); });
 
-    // ?tip=marka / ?tip=influencer ile sekme seç
-    var tip = new URLSearchParams(location.search).get("tip");
-    if (tip === "marka" || tip === "brand") setMode("brand"); else setMode("influencer");
+    // ?tip=marka / ?tip=influencer ile sekme seç, ?inf=<isim> ile influencer alanını doldur
+    var params = new URLSearchParams(location.search);
+    var tip = params.get("tip");
+    var infName = params.get("inf");
+    // Kart modalından "Bu influencer ile çalış" ile gelindiyse marka sekmesi + isim otomatik
+    if (tip === "marka" || tip === "brand" || infName) setMode("brand"); else setMode("influencer");
+    if (infName) {
+      var brandInf = document.getElementById("brandInf");
+      if (brandInf) brandInf.value = infName;
+    }
 
     function hideError() { var e = $("#applyError"); e.hidden = true; e.textContent = ""; }
     function showError(msg) { var e = $("#applyError"); e.textContent = msg; e.hidden = false; e.scrollIntoView({ behavior: "smooth", block: "center" }); }
