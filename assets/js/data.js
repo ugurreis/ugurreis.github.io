@@ -160,8 +160,8 @@
   const brands = ["Pratik Mutfak", "Kavi Tech", "Mavera Tekstil", "Zenfit", "Anatolia Travel", "Lumora", "Vesta Cosmetics", "Norra", "Doruk Digital", "Mira Beauty"];
 
   const contact = {
-    phoneDisplay: "0 542 212 53 95",
-    whatsapp: "905422125395",
+    phoneDisplay: "0 (555) 877 35 34",
+    whatsapp: "905558773534",
     email: "hello@influencerturkiye.com",
     address: "Şişli / İstanbul",
     hours: "Pazartesi – Cuma · 09:00 – 18:00",
